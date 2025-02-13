@@ -8,7 +8,13 @@ inputName = 1
 
 loop = 1
 
-while inputName  < 2:
+loop2 = 1
+
+loop3 = 1
+
+loop4 = 1
+
+while loop  < 2:
 
     print("""
 
@@ -26,15 +32,42 @@ while inputName  < 2:
       
     """)
 
-    numberOfGroups = input()
+    while loop2  < 2:
 
-    numberOfGroups = int(numberOfGroups)
+        numberOfGroups = input()
+
+        try:
+
+            numberOfGroups = int(numberOfGroups)
+
+            break
+    
+        except ValueError:
+
+            print("Invalid input. Please enter a valid number.")
+
+            print("")
+
+        else:
+
+             loop2 = 2
+
 
     time.sleep(1)
 
     studentlist = ["Shahood", "Masion", "Nate", "Gavin", "Muntag", "leo", "Christopher", "Marcos", "Jaiden", "Aidan", "Ryan", "Jacob Edward Sour", "Collyn", "Gavin Hood", "Andue", "Sam", "Mr.A", "Gabe", "Anthony", "Noha"]
 
-    while inputName  < 2:
+    while loop3  < 2:
+
+        print("""
+
+        Student List:
+      
+        """)
+
+        print(f"{studentlist}")
+
+        time.sleep(2)
 
         print("""
 
@@ -56,7 +89,7 @@ while inputName  < 2:
 
         else:
 
-            inputName += 1
+            loop3 += 1
 
     time.sleep(1)
 
@@ -103,27 +136,45 @@ while inputName  < 2:
 
     """)
 
-    loopAgain = input()
+    loop4 = 1
 
-    if loopAgain == "No":
+    while loop4  < 2:
 
-        print("""
+        loopAgain = input()
 
-    Thank you for using Group Maker v3
+        if loopAgain == "No":
 
-    """)
+            print("""
 
-        inputName = 2
+            Thank you for using Group Maker v3
 
-    if loopAgain == "Yes":
+            """)
+            loop = 2
 
-        print("""
+            loop4 = 2
 
-    Reseting...
+        if loopAgain == "Yes":
 
-    """)
+            print("""
 
-        inputName = 1
+            Reseting...
+
+            """)
+            loop = 1
+            
+            loop2 = 1
+
+            loop3 = 1
+
+            loop4 = 2
+
+        if loopAgain != "Yes" and loopAgain != "No":
+            
+            print("Invalid input. Please enter Yes or No.")
+
+            print("")
+         
+
 
 
     
